@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <meta name="description" content="Personal profile of Aizere Bakytbek" />
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>Aizere Bakytbek</h1>
+      <p>Third-year IT Management student</p>
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+      <section id="about" class="card p-6 rounded-xl shadow-md max-w-2xl">
+        <img src="fav.png" 
+        alt="A peaceful view of the sea taken by me"
+        class="profile-image"
+        />
+
+        <div class="profile-info">
+        <h2>About me</h2>
+        <p>
+          I am a third-year IT Management student. I would like to develop my web development skills so I can bring my ideas to life.
+        </p>
+        <div class="card-links">
+          <a href="mailto:aiz_bakytbek@kbtu.kz">Email</a>
+          <a href="https://github.com/abakytbek">GitHub</a>
+        </div>
+
+        <button class="like-btn">Like</button>
+      </div>
+
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Programming basics</li>
+          <li>Communication</li>
+          <li>Training Organization</li>
+          <li>Cooking</li>
+        </ul>
+      </section>
+
+      <section id="goals">
+        <h2>Goals</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Improve my English</td>
+              <td>Become more confident in English</td>
+            </tr>
+
+            <tr>
+              <td>Plan my dream trip</td>
+              <td>Save enough money for the trip</td>
+            </tr>
+
+            <tr>
+              <td>Read more</td>
+              <td>Read 10 books by the end of the year</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Email:
+          <a href="mailto:aiz_bakytbek@kbtu.kz">aiz_bakytbek@kbtu.kz</a>
+        </p>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Aizere Bakytbek:)</p>
+    </footer>
+
+    <script>
+      const btn = document.querySelector(".like-btn");
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("liked");
+        
+        btn.textContent = btn.classList.contains("liked")
+            ? 'Liked' : 'Like';
+      });
+    </script>
+
+
+
+  </body>
+</html>
