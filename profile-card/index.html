@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
     <meta name="description" content="Personal profile of Aizere Bakytbek" />
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
   </head>
 
   <body>
@@ -21,12 +25,26 @@
     </nav>
 
     <main>
-      <section id="about">
+
+      <section id="about" class="card p-6 rounded-xl shadow-md max-w-2xl">
+        <img src="fav.png" 
+        alt="A peaceful view of the sea taken by me"
+        class="profile-image"
+        />
+
+        <div class="profile-info">
         <h2>About me</h2>
         <p>
           I am a third-year IT Management student. I would like to develop my web development skills so I can bring my ideas to life.
         </p>
-        <img src="fav.png" alt="A peaceful view of the sea taken by me" />
+        <div class="card-links">
+          <a href="mailto:aiz_bakytbek@kbtu.kz">Email</a>
+          <a href="https://github.com/abakytbek">GitHub</a>
+        </div>
+
+        <button class="like-btn">Like</button>
+      </div>
+
       </section>
 
       <section id="skills">
@@ -93,5 +111,18 @@
     <footer>
       <p>© 2026 Aizere Bakytbek:)</p>
     </footer>
+
+    <script>
+      const btn = document.querySelector(".like-btn");
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("liked");
+        
+        btn.textContent = btn.classList.contains("liked")
+            ? 'Liked' : 'Like';
+      });
+    </script>
+
+
+
   </body>
 </html>
