@@ -1,35 +1,8 @@
-.card {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-
-    border: 1px solid black;
-    margin: 20px;
-}
-
-
 .profile-image {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-}
-
-@media (max-width: 600px) {
-    .card {
-        flex-direction: column;
-    }
-}
-
-.skill-badge {
-  min-width: 100px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #8b5cf6;
-  color: white;
-  border-radius: 20px;
 }
 
 .skills-list {

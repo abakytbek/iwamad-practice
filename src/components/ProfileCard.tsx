@@ -1,4 +1,5 @@
 import LikeButton from './LikeButton'
+import Card from './ui/Card'
 import './ProfileCard.css'
 
 type ProfileCardProps = {
@@ -13,7 +14,7 @@ function ProfileCard({
   avatarUrl,
 }: ProfileCardProps) {
   return (
-    <section className="card">
+    <Card>
       <img
         className="profile-image"
         src={avatarUrl}
@@ -26,7 +27,7 @@ function ProfileCard({
 
         <LikeButton />
       </div>
-    </section>
+    </Card>
   )
 }
 
