@@ -1,0 +1,38 @@
+.btn {
+  font: inherit;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.card {
+  max-width: 320px;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
