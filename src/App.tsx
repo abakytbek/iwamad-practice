@@ -1,22 +1,20 @@
-import Header from './components/Header'
-import ProfileCard from './components/ProfileCard'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import SkillsPage from './pages/SkillsPage'
+import ContactPage from './pages/ContactPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   return (
-    <>
-      <Header name="Aizere Bakytbek" />
-
-      <main>
-        <ProfileCard
-          name="Aizere Bakytbek"
-          role="Third-year IT Management student"
-          avatarUrl="/fav.png"
-        />
-      </main>
-
-      <Footer year={2026} />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="skills" element={<SkillsPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }
 
