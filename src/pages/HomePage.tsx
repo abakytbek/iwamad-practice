@@ -6,8 +6,7 @@ function HomePage() {
       <ProfileCard
         name="Aizere Bakytbek"
         role="Third-year IT Management student"
-        avatarUrl="/fav.png"
-      />
+        avatarUrl={`${import.meta.env.BASE_URL}fav.png`}      />
     </main>
   )
 }
