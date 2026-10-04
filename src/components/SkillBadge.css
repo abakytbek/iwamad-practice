@@ -1,0 +1,10 @@
+.skill-badge {
+  min-width: 100px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8b5cf6;
+  color: white;
+  border-radius: 20px;
+}
