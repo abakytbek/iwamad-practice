@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import LikeButton from './LikeButton'
+import './ProfileCard.css'
 
 type ProfileCardProps = {
   name: string
@@ -11,8 +12,6 @@ function ProfileCard({
   role,
   avatarUrl,
 }: ProfileCardProps) {
-  const [likes, setLikes] = useState(0)
-
   return (
     <section className="card">
       <img
@@ -25,9 +24,7 @@ function ProfileCard({
         <h2>{name}</h2>
         <p>{role}</p>
 
-        <button onClick={() => setLikes(likes + 1)}>
-          Like {likes}
-        </button>
+        <LikeButton />
       </div>
     </section>
   )

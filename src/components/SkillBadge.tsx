@@ -1,13 +1,10 @@
+import { type Skill } from '../data/skills'
 import './SkillBadge.css'
 
-type SkillBadgeProps = {
-  label: string
-}
-
-function SkillBadge({ label }: SkillBadgeProps) {
+function SkillBadge({ skill }: { skill: Skill }) {
   return (
     <div className="skill-badge">
-      {label}
+      {skill.label}
     </div>
   )
 }

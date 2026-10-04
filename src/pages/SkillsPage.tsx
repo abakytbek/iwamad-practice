@@ -1,9 +1,5 @@
 import SkillBadge from '../components/SkillBadge'
-
-type Skill = {
-  id: number
-  label: string
-}
+import { type Skill } from '../data/skills'
 
 function SkillsPage() {
   const skills: Skill[] = [
@@ -14,22 +10,18 @@ function SkillsPage() {
   ]
 
   return (
-    <main>
+    <section>
       <h2>Skills</h2>
 
       <div className="skills-list">
-        {skills.length > 0 ? (
-          skills.map((skill) => (
-            <SkillBadge
-              key={skill.id}
-              label={skill.label}
-            />
-          ))
-        ) : (
-          <p>No skills added yet.</p>
-        )}
+        {skills.map((skill) => (
+          <SkillBadge
+            key={skill.id}
+            skill={skill}
+          />
+        ))}
       </div>
-    </main>
+    </section>
   )
 }
 
