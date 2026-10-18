@@ -1,10 +1,11 @@
 :root {
   --color-primary: #1D4ED8;
-  --color-on-primary: #FFFFFF;
+  --color-on-primary: #d59a9a;
   --color-text: #1F2937;
   --color-text-muted: #4B5563;
   --color-surface: #FFFFFF;
   --color-border: #D1D5DB;
+  --color-error: #b91c1c;
 
   --space-2: 8px;
   --space-4: 16px;
